@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tarea 4-NCapas</title>
+</head>
+
+<body>
+      <div>
+		<h1>Ingreso de Producto</h1>
+           	<form method="post" th:action="@{/resultado}" th:object="${producto}">    		
+	            <div>
+	            	<label for="codigo">Codigo del producto   </label>
+		        	   	<input th:field = "*{codigo}" id="codigo" type="text" placeholder="Ingresa el codigo" style="width: 400px" name="codigo" />
+		            	<span th:errors= "*{codigo}" style="color: #FF0000"></span>
+	            </div>
+
+	            <br></br>
+	            <div>
+	            	<label for="nombre">Nombre del producto   </label>
+		        	   	<input th:field = "*{nombre}" id="nombre" type="text" placeholder="Ingresa el nombre" style="width: 400px" name="nombre" />
+		            	<span th:errors= "*{nombre}" style="color: #FF0000"></span>
+	            </div>
+	            <br></br>
+	            <div>
+	            	<label for="marca">Marca   </label>
+		                <input th:field="*{marca}" id="marca" type="text" placeholder="Ingresa tus fecha de nacimiento" style="width: 400px" name="marca" />
+		                <span th:errors="*{marca}" style="color: #FF0000"></span>
+	            </div>
+	            <br></br>
+	            <div>
+	            	<label for="descripcion">Descripción   </label>
+		                <input th:field="*{descripcion}" id="descripcion" type="text" placeholder="Ingresa la descripción" style="width: 400px" name="descripcion" />
+		                <span th:errors="*{descripcion}" style="color: #FF0000"></span>
+	            </div>
+	            <br></br>
+	            <div>
+	            	<label for="existencia">Existencias  </label>
+		                <input th:field="*{existencia}" id="colegio" type="number" placeholder="Ingresa tu instituto o colegio" style="width: 400px" name="colegio" />
+		                <span th:errors="*{existencia}" style="color: #FF0000"></span>
+	            </div>
+	            <br></br>
+	             <div>
+	             	<label for="fecha">Fecha de ingreso   </label>
+		                <input th:field="*{fecha}"  id="fecha" type="text" placeholder="Formato dd/mm/yyyy" style="width: 400px" name="fecha" />
+		                <span th:errors="*{fecha}" style="color: #FF0000"></span>
+	           	</div>
+	            <br></br>
+	                <div><input type="submit" value="Guardar producto"></div>
+	         </form>
+      </div>
+</body>
+</html>
